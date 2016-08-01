@@ -7,7 +7,7 @@
     <uses-sdk
         android:minSdkVersion="16"
         android:targetSdkVersion="19" />
-    
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
@@ -26,6 +26,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activity.WeatherActivity" >
+        </activity>
+
+        <service android:name="com.demoweather.app.service.AutoUpdateService" >
+        </service>
+
+        <receiver android:name="com.demoweather.app.receiver.AutoUpdateReceiver" >
+        </receiver>
     </application>
 
 </manifest>

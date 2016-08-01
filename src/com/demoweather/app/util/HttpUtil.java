@@ -32,11 +32,14 @@ public class HttpUtil {
             public void run() {
                 HttpURLConnection connection = null;
                 try {
+                    
+                    Log.d("HttpUtil", "--->>url=" + address);
+                    
                     URL url = new URL(address);
                     connection = (HttpURLConnection) url.openConnection();
                     connection.setRequestMethod("GET");
-                    connection.setConnectTimeout(80000);
-                    connection.setReadTimeout(80000);
+                    connection.setConnectTimeout(30000);
+                    //connection.setReadTimeout(0);
                     connection.setDoInput(true);
                     //connection.setDoOutput(true);
                     InputStream in = connection.getInputStream();
