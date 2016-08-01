@@ -10,6 +10,7 @@ import com.demoweather.app.model.County;
 import com.demoweather.app.model.Province;
 import com.demoweather.app.util.HttpCallbackListener;
 import com.demoweather.app.util.HttpUtil;
+import com.demoweather.app.util.Util;
 import com.demoweather.app.util.Utility;
 
 import android.app.Activity;
@@ -27,7 +28,6 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class ChooseAreaActivity extends Activity {
 
@@ -217,7 +217,7 @@ public class ChooseAreaActivity extends Activity {
                     @Override
                     public void run() {
                         closeProgressDialog();
-                        Toast.makeText(ChooseAreaActivity.this, "加载失败", Toast.LENGTH_SHORT).show();
+                        Util.showToast(ChooseAreaActivity.this, "加载失败");
                     }
                 });
             }
